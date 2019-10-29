@@ -37,6 +37,8 @@ RUN set -ex \
     ' \
     && apt-get update -yqq \
     && apt-get upgrade -yqq \
+    && mkdir -p /usr/share/man/man1mkdir -p /usr/share/man/man1 \
+    && apt-get install -yqq default-jre \
     && apt-get install -yqq --no-install-recommends \
         $buildDeps \
         freetds-bin \
